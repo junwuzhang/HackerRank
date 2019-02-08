@@ -24,7 +24,6 @@ void countSwaps(vector<int> a) {
     cout << "Array is sorted in " << numOfSwaps << " swaps." << endl;
     cout << "First Element: " << a[0] << endl;
     cout << "Last Element: " << a[a.size()-1] << endl;
-
 }
 
 int main()
