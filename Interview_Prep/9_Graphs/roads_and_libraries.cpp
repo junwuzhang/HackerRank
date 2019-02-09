@@ -2,13 +2,10 @@
 using namespace std;
 
 vector<string> split_string(string);
-
 vector<int> neighbors[100005];
-long clusterSize;
-bool visited[100005];
 
 // Use DFS to find out how many nodes are in one cluster
-void clusterSizeDFS(int currentNode)
+void clusterSizeDFS(int currentNode, long &clusterSize, bool visited[])
 {
     clusterSize++;
     visited[currentNode] = true;
@@ -16,7 +13,7 @@ void clusterSizeDFS(int currentNode)
     {
         if (!visited[neighbor])
         {
-            clusterSizeDFS(neighbor);
+            clusterSizeDFS(neighbor, clusterSize, visited);
         }
     }
 }
@@ -35,8 +32,8 @@ int main()
         long c_lib, c_road;
         cin >> n >> m >> c_lib >> c_road;
 
-        for (int i = 0; i <= n; i++)
-        {
+        bool *visited = new bool(n);
+        for (int i = 0; i <= n; i++){
             neighbors[i].clear();
             visited[i] = false;
         }
@@ -54,8 +51,8 @@ int main()
         {
             if (!visited[currentNode])
             {
-                clusterSize = 0;
-                clusterSizeDFS(currentNode);
+                long clusterSize = 0;
+                clusterSizeDFS(currentNode, clusterSize, visited);
                 totalCost += c_lib;
                 if (c_lib < c_road)
                 {
@@ -75,3 +72,4 @@ int main()
 
     return 0;
 }
+
