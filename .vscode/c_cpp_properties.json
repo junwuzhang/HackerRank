@@ -4,7 +4,8 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/Users/junwuzhang/Box Sync/0_Job-Seeking/HackerRank"
+                "/Users/junwuzhang/Box Sync/0_Job-Seeking/HackerRank",
+                "/Users/junwuzhang/Desktop/"
             ],
             "defines": [],
             "macFrameworkPath": [
@@ -18,3 +19,5 @@
     ],
     "version": 4
 }
+
+
