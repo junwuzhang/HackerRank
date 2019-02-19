@@ -3,7 +3,9 @@
         "deque": "cpp",
         "vector": "cpp",
         "iostream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "unordered_map": "cpp",
+        "limits": "cpp"
     },
     "C_Cpp.intelliSenseEngineFallback": "Disabled"
 }
